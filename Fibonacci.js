@@ -7,7 +7,10 @@ const rl = readline.createInterface({
 
 
 rl.on("line", (line) => {
-    console.log('입력받은 수: ' + line)
+    let result = Fibonacci_numbers(line);
+    console.log(result);
+
+
     rl.close(); // 필수!! close가 없으면 입력을 무한히 받는다.
 });
 rl.on('close', () => {
@@ -21,7 +24,7 @@ function Fibonacci_numbers(n){
       return n
    }
    
-    return Fibonacci_numbers(n-1) + Fibonacci_numbers(n-2)
+    return Fibonacci_numbers(n-1) + Fibonacci_numbers(n-2);
 
 }
      
